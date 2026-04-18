@@ -1,62 +1,60 @@
-# Portfolio Website Template
+# Sohail Shiraj — Portfolio Website
 
-A modern, responsive portfolio website template built with Next.js 15, TypeScript, and Tailwind CSS. This template is designed to be easily customizable and can be used by anyone to showcase their portfolio, blog, and professional information.
+A personal portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This repository powers a static-exported portfolio site with an MDX blog, project showcase, and configurable JSON-driven content.
 
 ## 🚀 Features
 
 - **Modern Tech Stack**: Next.js 15 with App Router, TypeScript, and Tailwind CSS
-- **Content Management**: Dynamic content from JSON files and MDX blog posts
-- **Responsive Design**: Mobile-first approach with beautiful animations
-- **Dark/Light Theme**: Built-in theme switching with next-themes
-- **Blog System**: MDX-powered blog with syntax highlighting
-- **SEO Optimized**: Meta tags, structured data, and performance optimized
-- **Animations**: Smooth animations with Framer Motion
-- **Type Safety**: Full TypeScript support throughout
+- **Static Export Ready**: Uses `output: 'export'` for a fully static site
+- **Content Management**: JSON data files and MDX-based blog posts
+- **Responsive Design**: Mobile-first layout with performant styles
+- **Theme Support**: `next-themes` for light/dark mode toggling
+- **SEO Friendly**: `manifest.webmanifest`, `sitemap.xml`, and `robots.txt` support
+- **Animations**: Smooth motion with Framer Motion
+- **Type Safety**: Full TypeScript support across the app
 
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Content**: MDX for blog posts, JSON for structured data
+- **Content**: MDX for blog posts, JSON for structured content
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
 - **Theme**: next-themes
-- **Deployment**: Vercel (recommended)
+- **Deployment**: GitHub Pages / Vercel / Any static host
 
 ## 📁 Project Structure
 
 ```
+content/                 # JSON and MDX content files
 src/
-├── app/                    # Next.js App Router pages
-│   ├── about/             # About page
-│   ├── blog/              # Blog pages
-│   ├── contact/           # Contact page
-│   ├── projects/          # Projects page
-│   └── layout.tsx         # Root layout
-├── components/            # Reusable components
-├── lib/                   # Utility functions
-└── content/              # Content files
-    ├── about/            # About page content
-    ├── blog/             # Blog posts (MDX)
-    ├── experience/        # Work experience
-    ├── education/         # Education history
-    └── projects/          # Project portfolio
+├── app/                 # Next.js App Router pages and routes
+│   ├── blog/            # Blog landing page
+│   ├── layout.tsx       # Root layout
+│   ├── manifest.ts      # Web manifest route
+│   ├── projects/        # Projects page
+│   ├── robots.ts        # robots.txt route
+│   ├── sitemap.ts       # sitemap.xml route
+│   └── page.tsx         # Home page
+├── components/          # Reusable UI components
+├── lib/                 # Utility functions and content helpers
+└── middleware.ts        # Optional request middleware
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
-- npm or yarn
+- Node.js 18+
+- npm
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio-website.git
-cd portfolio-website
+git clone https://github.com/sohailshiraj/sohailshiraj.github.git
+cd sohailshiraj.github
 ```
 
 2. Install dependencies:
@@ -69,7 +67,7 @@ npm install
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000).
 
 ## 📝 Content Management
 
@@ -81,88 +79,84 @@ npm run dev
 ---
 title: "Your Post Title"
 excerpt: "Brief description"
-date: "2024-01-15"
-author: "Your Name"
+date: "2025-01-15"
+author: "Sohail Shiraj"
 tags: ["React", "Next.js"]
 featured: false
 readTime: "5 min read"
 ---
 ```
 
-### Updating Personal Information
+### Updating Personal Content
 
 Edit the JSON files in the `content/` directory:
-- `content/about/index.json` - Personal information
-- `content/experience/index.json` - Work experience
-- `content/education/index.json` - Education history
-- `content/projects/index.json` - Project portfolio
+- `content/about/index.json` — Personal profile data
+- `content/experience/index.json` — Work history
+- `content/education/index.json` — Education history
+- `content/projects/index.json` — Project portfolio
 
-### Customizing the Theme
+### Theme and Styling
 
-The website uses CSS custom properties for theming. Edit `src/app/globals.css` to customize colors and styling.
+Customize the theme in `src/app/globals.css` and update Tailwind settings in `tailwind.config.ts`.
 
 ## 🎨 Customization
 
 ### Colors and Branding
 
-1. Update the color scheme in `tailwind.config.ts`
-2. Modify the CSS custom properties in `globals.css`
-3. Update the logo and favicon in `public/`
+1. Update the color palette in `tailwind.config.ts`
+2. Adjust CSS custom properties in `src/app/globals.css`
+3. Replace icons and images in `public/`
 
 ### Content Structure
 
-The website is designed to be easily customizable:
-- All content is stored in JSON/MDX files
-- Components are modular and reusable
-- Styling is consistent with Tailwind CSS
+- Content is managed with JSON and MDX files
+- UI components are reusable and modular
+- Styling follows Tailwind CSS utility classes
 
 ## 📦 Deployment
 
-### Vercel (Recommended)
+### GitHub Pages
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Configure environment variables if needed
-4. Deploy automatically
+This project is configured for static export and can be deployed to GitHub Pages using the `basePath` set in `next.config.mjs`.
+
+### Vercel
+
+1. Push the code to GitHub
+2. Connect the repository to Vercel
+3. Deploy automatically
 
 ### Other Platforms
 
-The website can be deployed to any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
+Any static host that supports Next.js static output is compatible.
 
 ## 🔧 Development
 
 ### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+- `npm run dev` — Start the development server
+- `npm run build` — Build for production
+- `npm run start` — Start the production server
+- `npm run lint` — Run ESLint
 
-### Code Style
+### Code Quality
 
 - TypeScript for type safety
-- ESLint for code quality
-- Prettier for code formatting
+- ESLint for linting
 - Tailwind CSS for styling
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+Contributions, issues, and feature requests are welcome.
 
 ## 📞 Contact
 
-- **Email**: your.email@example.com
-- **LinkedIn**: [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
+- **GitHub**: [github.com/sohailshiraj](https://github.com/sohailshiraj)
 
 ---
 
-Built with ❤️ using Next.js and Tailwind CSS
+Built with ❤️ using Next.js, TypeScript, and Tailwind CSS.
+
