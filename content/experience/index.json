@@ -1,0 +1,52 @@
+[
+  {
+    "id": "exp-1",
+    "company": "Book Depot Inc.",
+    "companyUrl": "https://www.bookdepotinc.com/",
+    "projectLinks": [
+      { "label": "BookOutlet.com", "url": "https://bookoutlet.com/" }
+    ],
+    "position": "Full Stack Web Developer",
+    "location": "Thorold, Canada",
+    "startDate": "2023-04",
+    "endDate": "present",
+    "current": true,
+    "summary": "Contributed to the full-stack development of BookOutlet.com, a high-traffic eCommerce platform serving tens of thousands of customers across North America. Led key initiatives including AI-powered system replacements that improved marketing efficiency by 60%, and CMS integrations that cut content update time in half - while helping maintain 99.9% uptime.",
+    "technologies": [
+      "Next.js", "React.js", "Node.js", "TypeScript", "PostgreSQL", "MongoDB",
+      "Docker", "GCP", "Kubernetes", "Contentful", "Builder.io", "Klaviyo", "Braintree"
+    ]
+  },
+  {
+    "id": "exp-2",
+    "company": "SoftwareQ Inc.",
+    "companyUrl": "https://www.softwareq.ca/",
+    "projectLinks": [],
+    "position": "Full Stack Software Engineer",
+    "location": "Waterloo, Canada",
+    "startDate": "2022-05",
+    "endDate": "2022-12",
+    "current": false,
+    "summary": "Worked with quantum computing researchers to make advanced algorithms more accessible by transforming command-line tools into a cross-platform desktop app using Electron.js and Python. Built RESTful APIs integrating with quantum infrastructure and containerized the full stack with Docker, boosting user productivity by 30% and cutting deployment errors by 15%.",
+    "technologies": [
+      "React.js", "Angular", "Electron.js", "Node.js", "Python (Flask)",
+      "TypeScript", "MongoDB", "Docker", "AWS", "Material UI"
+    ]
+  },
+  {
+    "id": "exp-3",
+    "company": "Systems Limited",
+    "companyUrl": "https://www.systemsltd.com/",
+    "projectLinks": [],
+    "position": "Software Engineer",
+    "location": "Karachi, PK",
+    "startDate": "2018-06",
+    "endDate": "2021-08",
+    "current": false,
+    "summary": "Delivered 5+ production applications across finance, retail, and logistics using Angular, React.js, and Node.js. Shipped web and mobile apps including Ionic and React Native projects, optimized APIs to cut data retrieval time by 20%, and mentored junior developers while leading 100+ code reviews to uphold team engineering standards.",
+    "technologies": [
+      "Angular", "React.js", "Node.js", "TypeScript", "Express",
+      "MongoDB", "Ionic", "React Native", "CI/CD", "SQL", "Jest"
+    ]
+  }
+]

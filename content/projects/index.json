@@ -1,0 +1,36 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Auth Flow Simulator",
+    "context": "Personal",
+    "builtAt": null,
+    "description": "A TypeScript library for simulating OAuth, 2FA, password reset, and session management flows during local development - removing the need for live auth providers in testing environments. Built with Node.js, Express, and Jest with CI/CD via GitHub Actions.",
+    "metrics": null,
+    "featured": true,
+    "technologies": ["TypeScript", "Node.js", "Express", "Jest", "GitHub Actions"],
+    "link": "https://github.com/sohailshiraj/auth-flow-sim",
+    "linkAlias": "GitHub",
+    "demo": null,
+    "status": "completed",
+    "startDate": "2024-08",
+    "endDate": "2024-10",
+    "category": "library"
+  },
+  {
+    "id": "proj-2",
+    "title": "ChartDesk",
+    "context": "Personal",
+    "builtAt": null,
+    "description": "A personal clinic utility tool for performing operations on PDF files, built through AI-assisted development. Focused on a clean, accessible interface that non-technical clinic staff could use independently without any technical overhead.",
+    "metrics": null,
+    "featured": true,
+    "technologies": ["React", "TypeScript", "Node.js", "Chart.js"],
+    "link": "https://github.com/sohailshiraj/chartdesk",
+    "linkAlias": "GitHub",
+    "demo": null,
+    "status": "completed",
+    "startDate": "2024-01",
+    "endDate": "2024-06",
+    "category": "frontend"
+  }
+]

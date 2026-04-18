@@ -1,0 +1,164 @@
+{
+  "name": "Sohail Shiraj",
+  "title": "Full Stack Software Engineer",
+  "subtitle": "I turn complex problems into clean, scalable software.",
+  "tagline": "Specializing in React, Next.js & Node.js",
+  "bio": "Full stack engineer with 5+ years shipping production software across eCommerce, APIs, and cloud platforms.",
+  "about": [
+    "Full stack engineer. Based in Ontario, Canada. 5+ years building software that ships, scales, and doesn't fall apart when traffic spikes or requirements change. I've always cared more about the quality of what I build than the speed at which I can call it done.",
+    "My stack lives in the JavaScript and TypeScript ecosystem - frontend frameworks like React, Next.js, and Angular on the client side, Node.js on the server. I've worked at every layer: designing component systems, building and optimizing REST APIs, managing databases, wiring up CI/CD pipelines, and handling cloud infrastructure on GCP and AWS. Different projects have pulled me toward different tools, and I've learned to be at home across all of them rather than locked into one way of doing things.",
+    "Currently I'm at Book Depot Inc., where I work on BookOutlet - one of the largest online book retailers in North America. I've led initiatives that moved real metrics: sales, user retention, and marketing efficiency. It's meaningful work, and it's made me a sharper engineer. When I'm not there, I'm building side projects that solve problems I've actually run into - because the best way to keep learning is to keep shipping."
+  ],
+  "image": "/profile.jpg",
+  "location": "Ontario, Canada",
+  "email": "sohail.shiraj@hotmail.com",
+  "phone": "548 333 8020",
+  "resume": "https://drive.google.com/uc?export=download&id=1o4240S6giOYw-AlrIqfqPkmsPz2teY4_",
+  "social": {
+    "github": "https://github.com/sohailshiraj",
+    "linkedin": "https://linkedin.com/in/sohail-shiraj",
+    "email": "mailto:sohail.shiraj@hotmail.com"
+  },
+  "nav": [
+    "About",
+    "Experience",
+    "Projects",
+    "Blog",
+    "Contact"
+  ],
+  "skills": {
+    "frontend": [
+      {
+        "name": "React.js",
+        "level": 95
+      },
+      {
+        "name": "Next.js",
+        "level": 95
+      },
+      {
+        "name": "Angular",
+        "level": 85
+      },
+      {
+        "name": "TypeScript",
+        "level": 90
+      },
+      {
+        "name": "JavaScript",
+        "level": 95
+      },
+      {
+        "name": "HTML5",
+        "level": 95
+      },
+      {
+        "name": "CSS3",
+        "level": 90
+      },
+      {
+        "name": "Ionic",
+        "level": 80
+      },
+      {
+        "name": "React Native",
+        "level": 80
+      },
+      {
+        "name": "Expo",
+        "level": 75
+      }
+    ],
+    "backend": [
+      {
+        "name": "Node.js",
+        "level": 95
+      },
+      {
+        "name": "Express.js",
+        "level": 85
+      },
+      {
+        "name": "Python (Flask)",
+        "level": 80
+      },
+      {
+        "name": "PostgreSQL",
+        "level": 85
+      },
+      {
+        "name": "MongoDB",
+        "level": 85
+      },
+      {
+        "name": "MySQL",
+        "level": 80
+      },
+      {
+        "name": "REST APIs",
+        "level": 90
+      },
+      {
+        "name": "SQL",
+        "level": 85
+      }
+    ],
+    "tools": [
+      {
+        "name": "Docker",
+        "level": 85
+      },
+      {
+        "name": "Kubernetes",
+        "level": 75
+      },
+      {
+        "name": "GCP",
+        "level": 80
+      },
+      {
+        "name": "AWS",
+        "level": 75
+      },
+      {
+        "name": "Jest",
+        "level": 85
+      },
+      {
+        "name": "Cypress",
+        "level": 80
+      },
+      {
+        "name": "CI/CD",
+        "level": 80
+      },
+      {
+        "name": "Git",
+        "level": 90
+      }
+    ],
+    "languages": [
+      {
+        "name": "JavaScript",
+        "level": 95
+      },
+      {
+        "name": "TypeScript",
+        "level": 90
+      },
+      {
+        "name": "Python",
+        "level": 80
+      },
+      {
+        "name": "SQL",
+        "level": 85
+      },
+      {
+        "name": "Bash",
+        "level": 75
+      }
+    ]
+  },
+  "summary": "Full Stack Developer with 5+ years of experience building scalable, user-focused web applications."
+}

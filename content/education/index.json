@@ -1,0 +1,94 @@
+[
+  {
+    "id": "edu-1",
+    "institution": "Conestoga College",
+    "degree": "Post Graduate Certificate - Mobile Solution Development",
+    "location": "Waterloo, Canada",
+    "startDate": "2021-09",
+    "endDate": "2022-12",
+    "current": false,
+    "description": "Advanced program focusing on mobile application development, modern web technologies, and software engineering practices.",
+    "achievements": [
+      "Graduated with CGPA: 3.87/4.0",
+      "Specialized in mobile and web application development",
+      "Completed comprehensive projects in React Native, Ionic, and modern web frameworks"
+    ],
+    "relevant_courses": [
+      "Mobile Application Development",
+      "Web Development Frameworks",
+      "Software Engineering",
+      "Database Systems",
+      "Project Management",
+      "User Interface Design"
+    ]
+  },
+  {
+    "id": "edu-2",
+    "institution": "NUCES (FAST)",
+    "degree": "Bachelor of Science in Computer Science",
+    "location": "Pakistan",
+    "startDate": "2014-08",
+    "endDate": "2018-06",
+    "current": false,
+    "description": "Comprehensive computer science program covering fundamental concepts, algorithms, data structures, and software engineering principles.",
+    "achievements": [
+      "Graduated with CGPA: 3.04/4.0",
+      "Strong foundation in computer science fundamentals",
+      "Completed multiple software development projects"
+    ],
+    "relevant_courses": [
+      "Data Structures and Algorithms",
+      "Software Engineering",
+      "Database Systems",
+      "Web Development",
+      "Computer Networks",
+      "Operating Systems",
+      "Object-Oriented Programming"
+    ]
+  },
+  {
+    "id": "edu-3",
+    "institution": "Coursera - The Hong Kong University of Science and Technology",
+    "degree": "Front-End JavaScript Frameworks: Angular",
+    "location": "Online",
+    "startDate": "2020-01",
+    "endDate": "2020-03",
+    "current": false,
+    "description": "Specialized certification in Angular framework development.",
+    "achievements": [
+      "Certificate ID: CYJUGS42U4J8",
+      "Mastered Angular framework and best practices",
+      "Completed hands-on projects and assignments"
+    ],
+    "relevant_courses": [
+      "Angular Framework",
+      "TypeScript",
+      "Component Architecture",
+      "Routing and Navigation",
+      "State Management"
+    ]
+  },
+  {
+    "id": "edu-4",
+    "institution": "Coursera - The Hong Kong University of Science and Technology",
+    "degree": "Front-End JavaScript Frameworks: React",
+    "location": "Online",
+    "startDate": "2020-04",
+    "endDate": "2020-06",
+    "current": false,
+    "description": "Comprehensive certification in React framework development and modern JavaScript practices.",
+    "achievements": [
+      "Certificate ID: P77AVPEB2Y9Y",
+      "Expertise in React ecosystem and tools",
+      "Completed advanced React projects"
+    ],
+    "relevant_courses": [
+      "React Framework",
+      "JSX and Components",
+      "State and Props",
+      "React Hooks",
+      "Context API",
+      "React Router"
+    ]
+  }
+]
