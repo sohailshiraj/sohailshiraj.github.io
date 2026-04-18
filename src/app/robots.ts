@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export default function robots(): MetadataRoute.Robots {
     // Static base URL for GitHub Pages
-    const baseUrl = 'https://sohailshiraj.github.io/sohailshiraj.github'
+    const baseUrl = 'https://sohailshiraj.github.io'
 
     return {
         rules: {
