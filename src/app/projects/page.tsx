@@ -22,6 +22,7 @@ function ArrowUpRightIcon() {
 }
 
 function getYear(d: string) {
+  if(d === null) return '';
   if (d === 'present') return new Date().getFullYear().toString();
   return d.split('-')[0];
 }

@@ -83,6 +83,9 @@ function formatDate(d: string) {
   return `${MONTHS[parseInt(month) - 1]} ${year}`;
 }
 function formatDateRange(start: string, end: string) {
+  if(end === null) {
+    return formatDate(start);
+  }
   return `${formatDate(start)} – ${formatDate(end)}`;
 }
 
