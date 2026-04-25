@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Analytics } from '@/components/analytics';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -56,6 +58,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6HFC6CJ1WM" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-6HFC6CJ1WM');
+        `}
+      </Script>
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
@@ -63,6 +75,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <Analytics />
           {children}
         </ThemeProvider>
       </body>
