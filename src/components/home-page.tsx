@@ -273,7 +273,7 @@ export function HomePage({ about, experience, projects }: HomePageProps) {
             {about.resume && (
               <a
                 href={about.resume}
-                target="_blank"
+                target="https://drive.google.com/file/d/1Gm8Cz9r48dixCuS0o-y5TY56j0giOLWk/view?usp=drive_link"
                 rel="noreferrer noopener"
                 className="mt-5 inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-md hover:shadow-primary/20"
               >
