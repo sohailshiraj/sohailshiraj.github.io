@@ -68,6 +68,7 @@ export default function RootLayout({
           gtag('config', 'G-6HFC6CJ1WM');
         `}
       </Script>
+      <meta name="google-site-verification" content="KUvryWwmcSir7c8p7t7uGR3ybvr36ZI-qDqs-_cE7Q4" />
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
