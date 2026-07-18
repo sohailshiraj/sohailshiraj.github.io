@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTheme } from 'next-themes';
 import { AboutData, Experience, Project, ExternalBlogPost } from '@/lib/content';
+import { event } from '@/lib/gtag';
 
 // ─── Icons ───────────────────────────────────────────────────────────────────
 
@@ -214,8 +215,43 @@ export function HomePage({ about, experience, projects }: HomePageProps) {
   const [activeSection, setActiveSection] = useState('about');
   const mainRef = useRef<HTMLElement>(null);
 
+  const handleResumeClick = () => {
+    event({
+      action: 'resume_download',
+      category: 'engagement',
+      label: 'home_page_resume',
+    });
+  };
+
   useEffect(() => {
     const ids = ['about', 'skills', 'experience', 'projects', 'contact'];
+
+    let activeTrackedSection: string | null = null;
+    const sectionStartTimes = new Map<string, number>();
+
+    const stopAndTrackSection = (sectionId: string | null) => {
+      if (!sectionId) return;
+      const startedAt = sectionStartTimes.get(sectionId);
+      if (startedAt) {
+        const durationSeconds = Math.max(1, Math.round((Date.now() - startedAt) / 1000));
+        event({
+          action: 'section_time_spent',
+          category: 'home_page_engagement',
+          label: sectionId,
+          value: durationSeconds,
+        });
+        sectionStartTimes.delete(sectionId);
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopAndTrackSection(activeTrackedSection);
+        activeTrackedSection = null;
+      } else if (activeTrackedSection) {
+        sectionStartTimes.set(activeTrackedSection, Date.now());
+      }
+    };
 
     // On scroll to bottom of the right column, force contact active
     const handleScroll = () => {
@@ -227,13 +263,26 @@ export function HomePage({ about, experience, projects }: HomePageProps) {
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     const observers: IntersectionObserver[] = [];
     ids.forEach(id => {
       const el = document.getElementById(id);
       if (!el) return;
       const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id);
+            if (activeTrackedSection && activeTrackedSection !== id) {
+              stopAndTrackSection(activeTrackedSection);
+            }
+            activeTrackedSection = id;
+            sectionStartTimes.set(id, Date.now());
+          } else if (activeTrackedSection === id) {
+            stopAndTrackSection(id);
+            activeTrackedSection = null;
+          }
+        },
         { rootMargin: '-20% 0px -60% 0px' }
       );
       obs.observe(el);
@@ -243,6 +292,8 @@ export function HomePage({ about, experience, projects }: HomePageProps) {
     return () => {
       observers.forEach(o => o.disconnect());
       window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      stopAndTrackSection(activeTrackedSection);
     };
   }, []);
 
@@ -275,6 +326,7 @@ export function HomePage({ about, experience, projects }: HomePageProps) {
                 href={about.resume}
                 target="_blank"
                 rel="noreferrer noopener"
+                onClick={handleResumeClick}
                 className="mt-5 inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-md hover:shadow-primary/20"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
@@ -421,6 +473,7 @@ export function HomePage({ about, experience, projects }: HomePageProps) {
                   href={about.resume}
                   className="group/link inline-flex items-center font-semibold leading-tight text-foreground hover:text-primary transition-colors"
                   target="_blank" rel="noreferrer noopener"
+                  onClick={handleResumeClick}
                 >
                   <span className="border-b border-transparent pb-px transition group-hover/link:border-primary">View Full Resume</span>
                   <ArrowUpRight className="ml-1 translate-y-px" />
